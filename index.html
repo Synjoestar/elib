@@ -1,0 +1,277 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>E-library TJKT</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      body {
+        background-image: url("/assets/p1.jpg") !important; /* Ganti dengan nama file gambar Anda */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        color: #fff; /* Agar teks terlihat jelas di atas background */
+      }
+
+      .navbar {
+        background-color: #343a40;
+        padding: 10px 20px;
+      }
+
+      #searchInput {
+        margin-right: 10px; /* Spasi antara input dan tombol */
+      }
+
+      .navbar h1 {
+        margin: 0;
+        font-size: 1.5rem;
+      }
+      .navbar .form-inline {
+        margin-left: auto;
+      }
+      footer {
+        padding: 10px 0;
+        position: relative;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+      }
+
+      /* Card Style for Books */
+      .book-card {
+        background: rgba(255, 255, 255, 0.8); /* Transparansi untuk background kartu */
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin: 15px 0;
+        display: flex;
+        align-items: center;
+      }
+
+      .book-card img {
+        border-radius: 8px;
+        margin-right: 20px;
+        width: 150px;
+        height: 200px;
+      }
+
+      .book-card h5 {
+        font-size: 1rem;
+        color: #333;
+      }
+
+      .book-card .btn {
+        background-color: #1cc88a;
+        color: #fff;
+        border-radius: 5px;
+        padding: 10px 20px;
+        transition: background-color 0.3s;
+        text-decoration: none;
+        margin-top: 10px; /* Add margin to separate from text */
+      }
+
+      .book-card .btn:hover {
+        background-color: #17a673;
+      }
+
+      /* Footer */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+
+      footer {
+        margin-top: auto;
+        text-align: center;
+        padding: 10px 0;
+        background-color: #17a2b8;
+        color: white;
+      }
+
+      .hidden {
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+        pointer-events: none;
+      }
+      .hidden {
+        display: none !important;
+      }
+      #bookContainer {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-info sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">E-library TJKT</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <form class="form-inline d-flex" id="searchForm">
+        <input id="searchInput" class="form-control mr-sm-2" type="search" placeholder="Search books" aria-label="Search" />
+        <button class="btn btn-outline-light btn-dark" type="submit">Search</button>
+      </form>
+    </nav>
+
+    <!-- Begin Page Content -->
+    <div class="container-fluid" style="padding: 20px">
+      <!-- Content Row -->
+      <div class="row" id="bookContainer">
+        <div class="col-md-6" style="padding: 15px">
+          <div class="book-card d">
+            <img src="/assets/p3.jpg" alt="Buku Pkn" />
+            <div style="color: black">
+              <h5 class="book-title fw-bold">Pendidikan Pancasila dan Kewarganegaraan</h5>
+              <p>Kelas: 11 Sma/Smk<br />Semester: Genap</p>
+              <a href="#" class="btn text-dark">Pinjam Buku</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6" style="padding: 15px">
+          <div class="book-card">
+            <img src="assets/p4.png" alt="Buku Agama" />
+            <div style="color: black">
+              <h5 class="book-title fw-bold">Pendidikan Agama Islam Dan Budi Pekerti</h5>
+              <p>Kelas: 11 Sma/Smk<br />Semester: Genap</p>
+              <a href="#" class="btn text-dark">Pinjam Buku</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6" style="padding: 15px">
+          <div class="book-card d-flex">
+            <img src="/assets/p2.jpg" alt="Buku Basis Data" />
+            <div style="color: black">
+              <h5 class="book-title fw-bold">Basis Data</h5>
+              <p>Kelas: 11 Sma/Smk<br />Semester: Genap</p>
+              <a href="#" class="btn text-dark">Pinjam Buku</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6" style="padding: 15px">
+          <div class="book-card">
+            <img src="assets/p5.jpg" alt="Buku PKWU" />
+            <div style="color: black">
+              <h5 class="book-title fw-bold">Prakarya dan Kewirausahaan Rekayasa</h5>
+              <p>Kelas: 11 Sma/Smk<br />Semester: Genap</p>
+              <a href="#" class="btn text-dark">Pinjam Buku</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6" style="padding: 15px">
+          <div class="book-card">
+            <img src="assets/p6.png" alt="Buku Bahasa Inggris" />
+            <div style="color: black">
+              <h5 class="book-title fw-bold">Bahasa Inggris</h5>
+              <p>Kelas: 11 Sma/Smk<br />Semester: Genap</p>
+              <a href="#" class="btn text-dark">Pinjam Buku</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6" style="padding: 15px">
+          <div class="book-card">
+            <img src="assets/p7.png" alt="Buku Bahasa Indonesia" />
+            <div style="color: black">
+              <h5 class="book-title fw-bold">Bahasa Indonesia</h5>
+              <p>Kelas: 11 Sma/Smk<br />Semester: Genap</p>
+              <a href="#" class="btn text-dark">Pinjam Buku</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6" style="padding: 15px">
+          <div class="book-card">
+            <img src="assets/p12.jpg" alt="Buku AIJ" />
+            <div style="color: black">
+              <h5 class="book-title fw-bold">Administrasi Infrastruktur Jaringan</h5>
+              <p>Kelas: 11 Sma/Smk<br />Semester: Genap</p>
+              <a href="#" class="btn text-dark">Pinjam Buku</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6" style="padding: 15px">
+          <div class="book-card">
+            <img src="assets/p9.jpeg" alt="Buku PJOK" />
+            <div style="color: black">
+              <h5 class="book-title fw-bold">Pendidikan Jasmani Olahraga dan Kesehatan</h5>
+              <p>Kelas: 11 Sma/Smk<br />Semester: Genap</p>
+              <a href="#" class="btn text-dark">Pinjam Buku</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6" style="padding: 15px">
+          <div class="book-card">
+            <img src="assets/p10.png" alt="Buku ASJ" />
+            <div style="color: black">
+              <h5 class="book-title fw-bold">Administrasi Sistem Jaringan</h5>
+              <p>Kelas: 11 Sma/Smk<br />Semester: Genap</p>
+              <a href="#" class="btn text-dark">Pinjam Buku</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6" style="padding: 15px">
+          <div class="book-card">
+            <img src="assets/p11.jpeg" alt="Buku KJ" />
+            <div style="color: black">
+              <h5 class="book-title fw-bold">Keamanan Jaringan</h5>
+              <p>Kelas: 11 Sma/Smk<br />Semester: Genap</p>
+              <a href="#" class="btn text-dark">Pinjam Buku</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add other books as needed -->
+      </div>
+      <!-- End of Content Row -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-info text-light">
+      <div class="copyright">
+        <span>&copy; TJKT XI TKJT 3 KELOMPOK 2</span>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom Script -->
+    <script>
+      document.getElementById("searchForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+        const query = document.getElementById("searchInput").value.toLowerCase();
+        const books = document.querySelectorAll(".book-card");
+
+        books.forEach((book) => {
+          const title = book.querySelector(".book-title").textContent.toLowerCase();
+          if (title.includes(query)) {
+            book.closest(".col-md-6").classList.remove("hidden");
+          } else {
+            book.closest(".col-md-6").classList.add("hidden");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
